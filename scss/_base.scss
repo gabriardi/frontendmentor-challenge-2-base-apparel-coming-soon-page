@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 55%;
+  }
+  @media only screen and (max-width: $bp-medium-2) {
+    font-size: 52%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 45%;
+  }
+}
+
+::selection {
+  background-color: $color-red-light;
+  color: #fff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 12rem auto;
+
+  @media only screen and (min-width: $bp-largest) {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.background-container {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-size: cover;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-row: 3/4;
+  }
+}

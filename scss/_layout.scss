@@ -1,0 +1,137 @@
+.logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 5rem 0;
+  align-self: center;
+  max-width: 58%;
+  &__icon {
+    width: 158px;
+    height: 33px;
+  }
+}
+
+.logo,
+.hero {
+  margin-left: 20%;
+  @media only screen and (max-width: $bp-small) {
+    margin-left: 10%;
+  }
+}
+
+.hero {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-top: 10%;
+  max-width: 52%;
+  @media only screen and (max-width: $bp-medium) {
+    max-width: 70%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-row: 3/4;
+    margin-left: 0;
+    justify-self: center;
+    text-align: center;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: $color-dark;
+    &--light {
+      font-weight: 300;
+      color: $color-red-light;
+    }
+  }
+
+  &__description {
+    margin-top: 2rem;
+  }
+
+  &__cta {
+    margin-top: 4rem;
+    position: relative;
+    margin-bottom: 4rem;
+    &__input {
+      font-size: 1.5rem;
+      outline: none;
+      border-radius: 5rem;
+      border: 1px solid $color-grey;
+      padding: 2rem 3rem;
+      width: 100%;
+      font-family: inherit;
+
+      &::placeholder {
+        color: $color-grey;
+      }
+
+      &--error {
+        border: 2px solid $color-red;
+      }
+    }
+    &__error__icon {
+      position: absolute;
+      right: 25%;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+    }
+    &__btn {
+      z-index: 10;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      border-radius: 5rem;
+      width: 20%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(
+        $gradient-angle,
+        $gradient-dark-1,
+        $gradient-dark-2
+      );
+      box-shadow: 0 1rem 2rem rgba($color-red-light, 0.7);
+
+      &:hover {
+        background: linear-gradient(rgba(#fff, 0.5), rgba(#fff, 0.5)),
+          linear-gradient($gradient-angle, $gradient-dark-1, $gradient-dark-2);
+        box-shadow: 0 1rem 2rem rgba($color-red-light, 0.9);
+      }
+      &:active {
+        box-shadow: 0 1rem 1.5rem rgba($color-red-light, 0.9);
+      }
+    }
+    &__error-message {
+      color: $color-red;
+      font-size: 1.4rem;
+      position: absolute;
+      left: 7%;
+      bottom: -50%;
+      display: none;
+    }
+  }
+
+  &__img {
+    &__container {
+      grid-column: 2/3;
+      grid-row: 1/-1;
+      @media only screen and (max-width: $bp-medium-2) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: center;
+      }
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+    }
+
+    & img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.show-error {
+  display: inline;
+}
