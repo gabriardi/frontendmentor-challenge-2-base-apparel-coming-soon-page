@@ -3,11 +3,6 @@
   grid-row: 1/2;
   margin: 5rem 0;
   align-self: center;
-  max-width: 58%;
-  &__icon {
-    width: 158px;
-    height: 33px;
-  }
 }
 
 .logo,
@@ -27,6 +22,7 @@
     max-width: 70%;
   }
   @media only screen and (max-width: $bp-small) {
+    // single column layout
     grid-row: 3/4;
     margin-left: 0;
     justify-self: center;
@@ -50,13 +46,13 @@
     position: relative;
     margin-bottom: 4rem;
     &__input {
-      font-size: 1.5rem;
-      outline: none;
-      border-radius: 5rem;
-      border: 1px solid $color-grey;
-      padding: 2rem 3rem;
-      width: 100%;
       font-family: inherit;
+      font-size: 1.5rem;
+      width: 100%;
+      padding: 2rem 3rem;
+      outline: none;
+      border: 1px solid $color-grey;
+      border-radius: 5rem;
 
       &::placeholder {
         color: $color-grey;
@@ -74,7 +70,6 @@
       display: none;
     }
     &__btn {
-      z-index: 10;
       cursor: pointer;
       outline: none;
       border: none;
@@ -92,7 +87,10 @@
       box-shadow: 0 1rem 2rem rgba($color-red-light, 0.7);
 
       &:hover {
-        background: linear-gradient(rgba(#fff, 0.5), rgba(#fff, 0.5)),
+        background: linear-gradient(
+            rgba($gradient-light-1, 0.5),
+            rgba($gradient-light-2, 0.5)
+          ),
           linear-gradient($gradient-angle, $gradient-dark-1, $gradient-dark-2);
         box-shadow: 0 1rem 2rem rgba($color-red-light, 0.9);
       }
@@ -110,19 +108,17 @@
     }
   }
 
-  &__img {
-    &__container {
+  &__img__container {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    @media only screen and (max-width: $bp-medium-2) {
       grid-column: 2/3;
-      grid-row: 1/-1;
-      @media only screen and (max-width: $bp-medium-2) {
-        grid-column: 2/3;
-        grid-row: 2/3;
-        align-self: center;
-      }
-      @media only screen and (max-width: $bp-small) {
-        grid-column: 1/2;
-        grid-row: 2/3;
-      }
+      grid-row: 2/3;
+      align-self: center;
+    }
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1/2;
+      grid-row: 2/3;
     }
 
     & img {

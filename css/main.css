@@ -98,12 +98,6 @@ html {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  max-width: 58%;
-}
-
-.logo__icon {
-  width: 158px;
-  height: 33px;
 }
 
 .logo,
@@ -168,13 +162,13 @@ html {
 }
 
 .hero__cta__input {
-  font-size: 1.5rem;
-  outline: none;
-  border-radius: 5rem;
-  border: 1px solid #e6dadd;
-  padding: 2rem 3rem;
-  width: 100%;
   font-family: inherit;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 2rem 3rem;
+  outline: none;
+  border: 1px solid #e6dadd;
+  border-radius: 5rem;
 }
 
 .hero__cta__input::-webkit-input-placeholder {
@@ -207,7 +201,6 @@ html {
 }
 
 .hero__cta__btn {
-  z-index: 10;
   cursor: pointer;
   outline: none;
   border: none;
@@ -223,7 +216,7 @@ html {
 }
 
 .hero__cta__btn:hover {
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 245, 245, 0.5)), linear-gradient(135deg, #f8bfbf, #ee8c8c);
   -webkit-box-shadow: 0 1rem 2rem rgba(206, 151, 151, 0.9);
           box-shadow: 0 1rem 2rem rgba(206, 151, 151, 0.9);
 }
@@ -274,7 +267,7 @@ html {
   }
 }
 
-.hero__img img {
+.hero__img__container img {
   width: 100%;
   display: block;
 }
