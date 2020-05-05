@@ -1,4 +1,4 @@
-const EMAIL_PATTERN = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+[.]+[A-Za-z]{2,}$/; // Valid email
+const EMAIL_PATTERN = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // Valid email
 
 const showError = () => {
   errorIcon.classList.add('show-error');
